@@ -1,0 +1,18 @@
+
+.as-component-searcher {
+
+    display: flex;
+    
+    border: 1px solid rgba($text-color,.25);
+    border-radius: 5px;
+
+    input {
+
+        background-color: transparent;
+        border: none;
+        color: $text-color;
+        font-size: .85rem;
+        font-weight: 200;
+        padding: 0.5rem 0.95rem;
+    }
+}
