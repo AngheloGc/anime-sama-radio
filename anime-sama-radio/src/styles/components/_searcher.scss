@@ -2,9 +2,14 @@
 .as-component-searcher {
 
     display: flex;
+    justify-content: space-between;
     
     border: 1px solid rgba($text-color,.25);
     border-radius: 5px;
+
+    position: relative;
+
+    width: 45%;
 
     input {
 
@@ -14,5 +19,36 @@
         font-size: .85rem;
         font-weight: 200;
         padding: 0.5rem 0.95rem;
+        width: 80%;
+
+    }
+
+    button {
+
+        background-color: lighten($color: $background-color, $amount: 20);
+        border: none;
+        color: $text-color;
+        cursor: pointer;
+        font-size: .8rem;
+        font-weight: 200;
+        padding: 0 1rem ;
+
+        &:hover {
+            background-color: lighten($color: $background-color, $amount: 30);
+        }
+
+    }
+
+    &-animeList {
+
+        background-color: darken($color: $background-color, $amount: 5);
+        font-size: .85rem;
+        font-weight: 200;
+        min-height: 250px;
+        padding: 1rem;
+        position: absolute;
+        top: 2.5rem;
+        width: 100%;
+
     }
 }

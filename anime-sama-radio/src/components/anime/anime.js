@@ -1,9 +1,6 @@
 import React from 'react'
 
-const Anime = () => {
-
-    const animeName = '';
-    const animeCoverURL = '';
+const Anime = ({animeName, animeCoverURL}) => {
 
     return (
 
