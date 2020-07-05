@@ -1,70 +1,64 @@
 import React from 'react'
 
 import { Query } from 'react-apollo';
-import { gql } from 'apollo-boost';
 
 import Anime from '../anime/anime';
 
-const AnimeList = () => {
+import { useDispatch } from 'react-redux';
+import { showModal } from '../../actions/modal';
 
-    return (
-        <Query query={gql`
-        query ($id: Int, $page: Int, $perPage: Int, $search: String) {
-            Page (page: $page, perPage: $perPage) {
-              pageInfo {
-                total
-                currentPage
-                lastPage
-                hasNextPage
-                perPage
-              }
-              media (id: $id, search: $search) {
-                id
-                coverImage {
-                  medium
-                }
-                bannerImage
-                title {
-                  romaji
-                }
-              }
-            }
-          }
-        `}
-        variables={
-          {
-            "search": "Fate",
-            "page": 1,
-            "perPage": 10
-        }
-        }
-        >
-        {({ loading, error, data }) => {
-            if (loading) return <div>Loading...</div>
-            if (error) return <div>Error</div>
-            
-            if (data.Page.media.length === 0) return <div className="div-flex-centered"><p style={{fontSize: 12,opacity: 0.7}}>No se encontraron animes.</p></div>
+import CreateSongForm from '../create-song/createSongForm';
+import { schema } from './schema';
 
-            return <div className="div-grid-gap-5">{
+
+const AnimeList = ({searchKey}) => {
+
+  const dispatch = useDispatch();
+
+  const handleModal = (component) => dispatch(showModal(component,true));
+
+  return (
+      
+      <Query
+        query={schema.query}
+        variables={schema.setVariables(searchKey,1,10)}
+      >
+
+      {({ loading, error, data }) => {
+
+          if (loading) return <div>Loading...</div>
+          if (error) return <div>Error</div>
+          if (!data.Page.media.length) return <div className="div-flex-centered"><p style={{fontSize: 12,opacity: 0.7}}>No se encontraron animes.</p></div>
+
+          return (
+          
+            <div className="div-grid-gap-5">
+            {
               data.Page.media.map(anime => {
+
+                const name = anime.title.romaji;
+                const image = anime.coverImage.medium;
+
+                const animeComponent = <Anime               
+                  animeName={name}
+                  animeCoverURL={image}
+                />     
+
+                const form = <CreateSongForm animeComponent={animeComponent}/>
+
                 return (
-                  <a href="/">
-                    <li>
-                      <Anime
-                        key={anime.title.romaji}
-                        animeName={anime.title.romaji}
-                        animeCoverURL={anime.coverImage.medium}
-                      />
-                    </li>
-                  </a>
+                  <li style={{cursor:'pointer'}} key={name} onClick={()=>handleModal(form)}>
+                    {animeComponent}             
+                  </li>
                 )
               })
-              }</div>
-        }}
+            }
+            </div>
+          )
+      }}
 
-        </Query>
-    )
-    
+      </Query>
+  )
 }
 
 export default AnimeList

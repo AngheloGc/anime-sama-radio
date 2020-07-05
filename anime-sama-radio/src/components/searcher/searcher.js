@@ -7,16 +7,20 @@ const Searcher = () => {
 
     const handleVisible = () => setVisible(true);
 
-    const handleNotVisible = () => setVisible(false);
+    const handleNotVisible = () => setTimeout(()=>{setVisible(false)},200);
+
+    const [searchKey, setSearchKey] = useState('');
+
+    const handleSearchKey = (value) => setSearchKey(value);
 
     return (
         <form className="as-component-searcher">
 
-            <input type="text" onFocus={handleVisible} onBlur={handleNotVisible} />
-            <button type="submit">Buscar</button>
+            <input type="text" onFocus={handleVisible} onBlur={handleNotVisible} onChange={(e)=>handleSearchKey(e.target.value)} />
+            <button type="submit" onClick={(e)=>{e.preventDefault();}}>Buscar</button>
             { visible && 
                 <div className="as-component-searcher-animeList" >
-                    <AnimeList />
+                    <AnimeList searchKey={searchKey} />
                 </div>
             }
         </form>
