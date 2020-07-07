@@ -5,6 +5,9 @@ export const types = {
     logout: '[Auth] Logout',
 
     showModal: '[Modal] Show',
-    closeModal: '[Modal] Close'
+    closeModal: '[Modal] Close',
+
+    addSong: '[SongList] Add Song',
+    removeSong: '[SongList] Remove Song',
 
 }

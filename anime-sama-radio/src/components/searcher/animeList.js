@@ -51,6 +51,7 @@ const AnimeList = ({searchKey}) => {
                     {animeComponent}             
                   </li>
                 )
+
               })
             }
             </div>
