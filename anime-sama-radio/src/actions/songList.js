@@ -10,3 +10,14 @@ export const addSong = (list,newSong) => ({
     }
 
 })
+
+
+export const removeSong = (list,removedSong) => ({
+
+    type: types.removeSong,
+    payload: {
+        list,
+        removedSong
+    }
+
+})

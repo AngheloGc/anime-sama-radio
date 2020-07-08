@@ -16,7 +16,8 @@ export const songListReducer = (state = {songList: []}, action) => {
         case types.removeSong:
 
             return { 
-                songList: [], 
+                songList: [...action.payload.list],
+                removedSong: action.payload.removedSong 
             }
     
         default:

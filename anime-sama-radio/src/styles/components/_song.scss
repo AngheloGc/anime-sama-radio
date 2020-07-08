@@ -1,6 +1,8 @@
 .as-component-song {
 
-    display: flex;
+    display: grid;
+    grid-template-columns: 3rem 1fr 2rem;
+    justify-items: start;
     align-items: center;
 
     padding: 0.5rem;
@@ -22,8 +24,8 @@
     &-body {
 
         &-title {
-            font-weight: normal;
-            font-size: 1rem;
+            font-weight: 300;
+            font-size: 0.8rem;
         }
 
         &-detail {
@@ -31,6 +33,23 @@
             font-size: 0.8rem;
             color: darken($text-color,30);
         }
+    }
+
+    &-removeButton {
+
+        background-color: $background-color;
+        border: none;
+        color: darken($text-color,35);
+        font-weight: 100;
+        padding: 0.3rem 1rem;
+        border-radius: 1rem;
+        font-size: 1rem;
+        cursor: pointer;
+
+        &:hover {
+            background-color: lighten($background-color, 3);
+        }
+            
     }
 
 }
