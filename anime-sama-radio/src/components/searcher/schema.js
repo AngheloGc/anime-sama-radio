@@ -16,6 +16,7 @@ export const schema = {
                 id
                 coverImage {
                 medium
+                large
                 }
                 bannerImage
                 title {

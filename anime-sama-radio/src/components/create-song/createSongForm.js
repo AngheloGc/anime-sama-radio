@@ -17,14 +17,16 @@ const CreateSongForm = ({animeComponent}) => {
         e.preventDefault();
 
         const name = animeComponent.props.animeName;
-        const image = animeComponent.props.animeCoverURL;
+        const image = animeComponent.props.animeCoverLarge;
+        const banner = animeComponent.props.animeBanner;
 
         const newSong = {
 
             uid: name.substring(0,3) + Date.now(),
             name: name,
             image: image,
-            detail: detail
+            detail: detail,
+            banner: banner,
         }
 
         dispatch( addSong([...state.songList], newSong) );

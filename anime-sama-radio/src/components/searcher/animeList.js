@@ -38,10 +38,14 @@ const AnimeList = ({searchKey}) => {
 
                 const name = anime.title.romaji;
                 const image = anime.coverImage.medium;
+                const imageLarge = anime.coverImage.large;
+                const banner = anime.bannerImage || imageLarge;
 
                 const animeComponent = <Anime               
                   animeName={name}
                   animeCoverURL={image}
+                  animeBanner={banner}
+                  animeCoverLarge={imageLarge}
                 />     
 
                 const form = <CreateSongForm animeComponent={animeComponent}/>

@@ -29,25 +29,29 @@
         }
 
         &-detail {
-            font-weight: 200;
-            font-size: 0.8rem;
             color: darken($text-color,30);
+            font-size: 0.8rem;
+            font-weight: 200;
         }
     }
 
     &-removeButton {
 
         background-color: $background-color;
+        border-radius: .9rem;
         border: none;
-        color: darken($text-color,35);
-        font-weight: 100;
-        padding: 0.3rem 1rem;
-        border-radius: 1rem;
-        font-size: 1rem;
+        color: darken($text-color,50);
         cursor: pointer;
+        font-size: .8rem;
+        font-weight: 300;
+        height: 1.8rem;
+        min-height: 1.8rem;
+        min-width: 1.8rem;
+        width: 1.8rem;
 
         &:hover {
             background-color: lighten($background-color, 3);
+            color: darken($text-color,10);
         }
             
     }
