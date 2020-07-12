@@ -1,7 +1,46 @@
 
 .as-container-songList {
-    height: 100%;
+    
     background-color: #111;
     border-radius: 5px;
-    padding: 1rem;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    position: relative;
+
+    
+    scrollbar-width: thin;
+
+    &:hover {
+        overflow-y: scroll;
+
+        .as-component-song {
+            padding: 0.75rem 0.5rem 0.75rem 1rem;
+        }
+    }
+
+    header {
+
+            
+        background-color: #111;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        color: rgba($text-color,.75);
+        display: flex;
+        font-size: .9rem;
+        font-weight: 200;
+        justify-content: space-between;
+        padding: 0.5rem 1rem;
+        position: fixed;
+        width: 367px;
+        z-index: 50;
+    }
+
+    &-items {
+
+        background-color: transparent;
+
+        
+    }
+
 }
