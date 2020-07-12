@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f9f8ab6e9849765e12efacbd120b1393",
+    "revision": "3a8e7227f492469610b03830475731cb",
     "url": "/anime-sama-radio/index.html"
   },
   {
-    "revision": "97e3d8a323f036987423",
+    "revision": "2641466b1cc2bbbc73c9",
     "url": "/anime-sama-radio/static/css/main.a74332f0.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/anime-sama-radio/static/js/2.ae98d196.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "97e3d8a323f036987423",
-    "url": "/anime-sama-radio/static/js/main.079c980d.chunk.js"
+    "revision": "2641466b1cc2bbbc73c9",
+    "url": "/anime-sama-radio/static/js/main.0eb3d2fc.chunk.js"
   },
   {
     "revision": "9808cb0c353b8686a528",
