@@ -14,7 +14,7 @@ const Song = ({uid,name,image,detail}) => {
 
         e.preventDefault();
 
-        const removedSong = songList.find( song => song.uid === uid );
+        const removedSong = songList.find( song => song.uid == uid );
 
         const list = songList.filter( song => song !== removedSong );
 
