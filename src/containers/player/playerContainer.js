@@ -1,6 +1,5 @@
 import React from 'react'
 import Player from '../../components/player/player'
-import disk from '../../assets/img/disk.png'
 import { useSelector } from 'react-redux'
 
 const PlayerContainer = () => {

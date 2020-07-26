@@ -1,10 +1,31 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Song from '../../components/song/song'
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { loadQueue } from '../../firebase/helpers/loadQueue';
+import { setSongs } from '../../actions/songList';
 
 const SongListContainer = () => {
 
-    const {newSong, songList} = useSelector(state => state.songList);
+    const dispatch = useDispatch();
+    
+    const { newSong, songList } = useSelector(state => state.songList)
+    
+
+    useEffect( () => {
+
+        async function getSongs() {
+
+            const songs = await loadQueue();
+            
+            dispatch( setSongs(songs) )
+
+        }
+
+        getSongs();
+
+
+    }, []);
+
 
     return (
         <div className="as-container-songList">
@@ -23,5 +44,6 @@ const SongListContainer = () => {
     );
 
 }
+
 
 export default SongListContainer;

@@ -6,7 +6,7 @@ const Player = ({title,description,cover,banner}) => {
 
         <div className="as-component-player">
             
-            {cover!='' && 
+            {cover!=='' && 
             <div className="as-component-player-content">
                 <div className="blured-box" style={{backgroundImage: `url(${banner})`}}></div>
                 <header>
@@ -17,7 +17,7 @@ const Player = ({title,description,cover,banner}) => {
                     <span>Cambiar</span>
                 </header>
                 <div className="div-flex-centered">
-                    <img className="as-component-player-content-cover" src={ cover } />
+                    <img className="as-component-player-content-cover" src={ cover } alt="cover"/>
                     <div className="as-component-player-content-detail">
                         <h2>{ title }</h2>
                         <p>{ description }</p>   
