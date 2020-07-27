@@ -1,8 +1,8 @@
-import { db } from "../firebaseConfig"
+import { firebase } from 'firebase/app';
 
 export const loadQueue = async () => {
 
-    const snap = await db.collection(`queue`).get();
+    const snap = firebase.database().ref('queue');
 
     const songs = [];
 

@@ -3,7 +3,7 @@ import 'firebase/firestore';
 import 'firebase/auth';
 
 
-const firebaseConfig = {
+const config = {
 
     apiKey: "AIzaSyA0LMm1z3A5qdHmgXqPypxphDextrOqmsc",
     authDomain: "anime-sama-radio-7a772.firebaseapp.com",
@@ -14,8 +14,8 @@ const firebaseConfig = {
     appId: "1:304325430709:web:1172d0d1353039fdc65dfc",
     measurementId: "G-WYMDFPZRXH"
 };
-  // Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+
+firebase.initializeApp(config);
 
 const db = firebase.firestore();
 const googleAuthProvider = new firebase.auth.GoogleAuthProvider();

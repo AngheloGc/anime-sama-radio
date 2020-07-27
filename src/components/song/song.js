@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { removeSong } from '../../actions/songList';
-import { db } from '../../firebase/firebaseConfig';
+import { database } from 'firebase';
 
 const Song = ({uid,name,image,detail}) => {
 
@@ -15,7 +15,7 @@ const Song = ({uid,name,image,detail}) => {
 
         e.preventDefault();
 
-        db.collection('queue').doc(uid).delete();
+        database().ref('queue/' + uid).remove();
 
         const removedSong = songList.find( song => song.uid === uid );
 

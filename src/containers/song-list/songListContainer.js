@@ -3,6 +3,8 @@ import Song from '../../components/song/song'
 import { useDispatch, useSelector } from 'react-redux';
 import { loadQueue } from '../../firebase/helpers/loadQueue';
 import { setSongs } from '../../actions/songList';
+import { database } from 'firebase';
+
 
 const SongListContainer = () => {
 
@@ -11,19 +13,19 @@ const SongListContainer = () => {
     const { newSong, songList } = useSelector(state => state.songList)
     
 
-    useEffect( () => {
+    database().ref('queue').orderByChild('date').once('value', (snap) => {
 
-        async function getSongs() {
+        const songs = [];
 
-            const songs = await loadQueue();
-            
-            dispatch( setSongs(songs) )
+        snap.forEach((child) => {
+            let song = child.val();
 
-        }
+            songs.push(song);
+        })
 
-        getSongs();
+        dispatch( setSongs(songs) );
 
-    }, []);
+    })
 
 
     return (
