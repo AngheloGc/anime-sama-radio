@@ -11,6 +11,12 @@ export const addSong = (list,newSong) => ({
 
 })
 
+export const setSongs = (songs) => ({
+
+    type: types.setSongs,
+    payload: songs
+})
+
 
 export const removeSong = (list,removedSong) => ({
 

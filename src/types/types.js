@@ -8,6 +8,7 @@ export const types = {
     closeModal: '[Modal] Close',
 
     addSong: '[SongList] Add Song',
+    setSongs: '[SongList] Set Songs',
     removeSong: '[SongList] Remove Song',
 
 }

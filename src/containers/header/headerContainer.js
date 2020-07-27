@@ -3,24 +3,18 @@ import Logo from '../../components/logo/logo'
 import Searcher from '../../components/searcher/searcher'
 import User from '../../components/user/user'
 import LoginButton from '../../components/login/loginButton';
+import { useSelector } from 'react-redux';
 
 const HeaderContainer = () => {
 
-    const isLogin = false;
-    let login;
-
-    if(isLogin) {
-        login = <User/>
-    }else{
-        login = <LoginButton/>
-    }
+    const state = useSelector(state => state.auth)
 
     return (
         
         <header className="as-header">
             <Logo />
             <Searcher />
-            {login}
+            {state?.uid && <User uid={state.uid} photo={state.photo} name={state.name}/> || <LoginButton/>}
         </header>
 
     )
