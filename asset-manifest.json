@@ -1,24 +1,23 @@
 {
   "files": {
-    "main.css": "/anime-sama-radio/static/css/main.a74332f0.chunk.css",
-    "main.js": "/anime-sama-radio/static/js/main.0eb3d2fc.chunk.js",
-    "main.js.map": "/anime-sama-radio/static/js/main.0eb3d2fc.chunk.js.map",
-    "runtime-main.js": "/anime-sama-radio/static/js/runtime-main.c30dee7d.js",
-    "runtime-main.js.map": "/anime-sama-radio/static/js/runtime-main.c30dee7d.js.map",
-    "static/js/2.ae98d196.chunk.js": "/anime-sama-radio/static/js/2.ae98d196.chunk.js",
-    "static/js/2.ae98d196.chunk.js.map": "/anime-sama-radio/static/js/2.ae98d196.chunk.js.map",
+    "main.css": "/anime-sama-radio/static/css/main.93738084.chunk.css",
+    "main.js": "/anime-sama-radio/static/js/main.041b62bb.chunk.js",
+    "main.js.map": "/anime-sama-radio/static/js/main.041b62bb.chunk.js.map",
+    "runtime-main.js": "/anime-sama-radio/static/js/runtime-main.87da872c.js",
+    "runtime-main.js.map": "/anime-sama-radio/static/js/runtime-main.87da872c.js.map",
+    "static/js/2.97dfcaf4.chunk.js": "/anime-sama-radio/static/js/2.97dfcaf4.chunk.js",
+    "static/js/2.97dfcaf4.chunk.js.map": "/anime-sama-radio/static/js/2.97dfcaf4.chunk.js.map",
     "index.html": "/anime-sama-radio/index.html",
-    "precache-manifest.a5c74a5655afd75f3a1151fbb6bae097.js": "/anime-sama-radio/precache-manifest.a5c74a5655afd75f3a1151fbb6bae097.js",
+    "precache-manifest.63f5177018ef6f155f3842d2b3c8cf44.js": "/anime-sama-radio/precache-manifest.63f5177018ef6f155f3842d2b3c8cf44.js",
     "service-worker.js": "/anime-sama-radio/service-worker.js",
-    "static/css/main.a74332f0.chunk.css.map": "/anime-sama-radio/static/css/main.a74332f0.chunk.css.map",
-    "static/js/2.ae98d196.chunk.js.LICENSE.txt": "/anime-sama-radio/static/js/2.ae98d196.chunk.js.LICENSE.txt",
-    "static/media/disk.png": "/anime-sama-radio/static/media/disk.829d2cbf.png",
+    "static/css/main.93738084.chunk.css.map": "/anime-sama-radio/static/css/main.93738084.chunk.css.map",
+    "static/js/2.97dfcaf4.chunk.js.LICENSE.txt": "/anime-sama-radio/static/js/2.97dfcaf4.chunk.js.LICENSE.txt",
     "static/media/googleIcon.png": "/anime-sama-radio/static/media/googleIcon.02e7940c.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.c30dee7d.js",
-    "static/js/2.ae98d196.chunk.js",
-    "static/css/main.a74332f0.chunk.css",
-    "static/js/main.0eb3d2fc.chunk.js"
+    "static/js/runtime-main.87da872c.js",
+    "static/js/2.97dfcaf4.chunk.js",
+    "static/css/main.93738084.chunk.css",
+    "static/js/main.041b62bb.chunk.js"
   ]
 }
