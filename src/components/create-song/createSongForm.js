@@ -32,7 +32,7 @@ const CreateSongForm = ({animeComponent}) => {
 
         dispatch( addSong([...state.songList], newSong) );
 
-        db.collection(`queue`).add(newSong);
+        db.collection(`queue`).doc(newSong.uid).set(newSong);
 
     }
 
