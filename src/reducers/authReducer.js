@@ -8,6 +8,7 @@ export const authReducer = (state = {}, action) => {
 
             return {
                 uid: action.payload.uid,
+                photo: action.payload.photo,
                 name: action.payload.displayName
             }
         

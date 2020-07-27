@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { addSong } from './../../actions/songList';
+import { db } from '../../firebase/firebaseConfig';
 
 const CreateSongForm = ({animeComponent}) => {
 
@@ -30,6 +31,8 @@ const CreateSongForm = ({animeComponent}) => {
         }
 
         dispatch( addSong([...state.songList], newSong) );
+
+        db.collection(`queue`).add(newSong);
 
     }
 

@@ -1,15 +1,12 @@
 import React from 'react'
-import logo from './logo192.png'
 
-const User = () => {
-
-    const userName = "Anghelo"
+const User = ({uid, photo, name}) => {
 
     return (
-        <div className="as-component-user">
+        <div id={uid} className="as-component-user">
 
-            <span>Bienvenido, <strong> { userName } </strong>!</span>
-            <img src={ logo } alt={ userName }/>
+            <span>Bienvenido, <strong> { name } </strong></span>
+            <img src={ photo } alt={ name }/>
         
         </div>
     );
