@@ -9,7 +9,7 @@ const Searcher = () => {
 
     const handleNotVisible = () => setTimeout(()=>{setVisible(false)},200);
 
-    const [searchKey, setSearchKey] = useState('');
+    const [searchKey, setSearchKey] = useState('0');
 
     const handleSearchKey = (value) => setSearchKey(value);
 

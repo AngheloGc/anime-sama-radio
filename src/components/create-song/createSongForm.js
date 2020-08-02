@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { addSong } from './../../actions/songList';
 import { database } from 'firebase/app';
+import { closeModal } from '../../actions/modal';
 
 const CreateSongForm = ({animeComponent}) => {
 
@@ -34,6 +35,8 @@ const CreateSongForm = ({animeComponent}) => {
 
         database().ref('queue/' + newSong.uid).set({...newSong,date:Date.now()});
 
+        dispatch( closeModal({},false));
+
     }
 
     return (
@@ -41,8 +44,10 @@ const CreateSongForm = ({animeComponent}) => {
 
             {animeComponent}
             <input type="text" onInput={e=>setDetail(e.target.value)} placeholder="Especifica si es OP/ED - Ej: Ending 1"/>
-            <button onClick={e=>createSong(e)}>Agregar a Cola</button>
-            <button>Hacer pedido</button>
+            <div className="as-component-createSongForm-buttons">
+                <button onClick={e=>createSong(e)}>Agregar a Cola</button>
+                {/* <button  onClick={e=>e.preventDefault()}>Hacer pedido</button> */}
+            </div>
         
         </form>
     );
