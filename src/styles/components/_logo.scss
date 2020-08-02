@@ -1,0 +1,20 @@
+
+.as-component-logo {
+
+    display: flex;
+    align-items: center;
+
+    img {
+        
+        height: 1.5rem;
+        margin-right: 5px;
+        object-fit: cover;
+    }
+
+    h1 {
+
+        font-size: 1rem;
+        font-weight: 400;
+
+    }
+}

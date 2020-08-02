@@ -1,0 +1,72 @@
+
+.as-component-createSongForm {
+    padding: 5rem;
+    border: 1px solid rgba(gray,.1);
+    border-radius: 5px;
+    background-color: rgba(#111,.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 40rem;
+    min-width: 40rem;
+
+    input {
+        margin-top: 1rem;
+        border: none;
+        border-radius: 3px;
+        padding: 0.75rem 1.25rem;
+        width: 100%;
+        text-align: center;
+        font-size: 1.1rem;
+    }
+
+    &-buttons {
+        width: 100%;
+        display: grid;
+        display: flex;
+        margin: 1rem 0 0;
+        justify-content: center;;
+    }
+
+    button {
+        border: 1px solid $primary-color;
+        color: $primary-color;
+        padding: 0.75rem 1rem;
+        width: calc(50% - 0.25rem);
+        border-radius: 5px;
+        background-color: transparent;
+        text-align: center;
+        cursor: pointer;
+        transition: all .1s ease-in;
+
+        &:hover {
+            background-color: darken($color: $primary-color, $amount: 5);
+            border: 1px solid darken($color: $primary-color, $amount: 5);
+            color: white;
+        }
+    }
+
+    .as-component-anime {
+        font-size: 1.2rem;
+        padding: 0;
+
+        display: flex;
+        flex-direction: column;
+
+        text-align: center;
+        
+        img {
+            height: 5rem;
+            min-height: 5rem;
+            min-width: 5rem;
+            width: 5rem;
+            border-radius: 3px;
+            object-fit: cover;
+            margin: 0 0 1rem;
+        }
+
+        &:hover {
+            background-color: inherit;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+
+.as-component-user {
+    
+    display: flex;
+    align-items: center;
+
+    span {
+
+        font-weight: 200;
+
+    }
+
+    img {
+
+        height: 1.5rem;
+        margin-left: 5px;
+        object-fit: cover;
+        width: 1.5rem;
+        border-radius: 2rem;
+    }
+
+}
