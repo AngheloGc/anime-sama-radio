@@ -51,3 +51,28 @@
         position: absolute;
     }
 }
+
+.close-modal-button {
+
+    background-color: lighten($background-color,20);
+    border-radius: 2.5rem;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-weight: 300;
+    height: 2.5rem;
+    min-height: 2.5rem;
+    min-width: 2.5rem;
+    width: 2.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    position: absolute;
+    z-index: 99;
+    top: 7rem;
+    right: 17.5rem;
+
+}

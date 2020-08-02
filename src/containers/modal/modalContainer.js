@@ -16,9 +16,12 @@ const ModalContainer = ({isActive,component}) => {
     }
 
     return (
-        <div className="as-container-modal" style={{ display: isActive ? 'flex' : 'none'}} onClick={(e)=>handleModal(e)}>
-            {component}
-        </div>
+        <>
+            <div className="close-modal-button" style={{ display: isActive ? 'flex' : 'none'}} onClick={e=>e.preventDefault()}><span>x</span></div>
+            <div className="as-container-modal" style={{ display: isActive ? 'flex' : 'none'}} onClick={(e)=>handleModal(e)}>
+                {component}
+            </div>
+        </>
     );
 
 }

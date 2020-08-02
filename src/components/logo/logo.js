@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from './logo192.png'
+import logo from './logosama.png'
 
 const Logo = () => {
 
@@ -9,7 +9,6 @@ const Logo = () => {
         <div className="as-component-logo">
 
             <img src={ logo } alt={ appName }/>
-            <h1>{ appName }</h1>
         
         </div>
     );
