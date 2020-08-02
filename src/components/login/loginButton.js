@@ -14,8 +14,8 @@ const LoginButton = () => {
     return (
         <div className="as-component-loginButton" onClick={ handleGoogleLogin }>
 
-            <img src={ googleIcon } alt="Iniciar sesión con Google" />
-            <span>Iniciar sesión con Google</span>
+            <img src={ googleIcon } alt="Google" />
+            <span>Iniciar sesión</span>
         
         </div>
     );
