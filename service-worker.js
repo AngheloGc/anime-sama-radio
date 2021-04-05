@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/anime-sama-radio/precache-manifest.4d699f6ca1d8d819aad1e6cf9f4b448b.js"
+  "/anime-sama-radio/precache-manifest.1ee4a016a57ed2cff47c83d22ba94a75.js"
 );
 
 self.addEventListener('message', (event) => {
