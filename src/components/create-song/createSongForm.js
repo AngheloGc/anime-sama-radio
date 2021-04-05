@@ -24,7 +24,7 @@ const CreateSongForm = ({animeComponent}) => {
 
         const newSong = {
 
-            uid: name.substring(0,3) + Date.now(),
+            uid: name.substring(0,3).split('.').join("") + Date.now(),
             name: name,
             image: image,
             detail: detail,
@@ -33,7 +33,7 @@ const CreateSongForm = ({animeComponent}) => {
 
         dispatch( addSong([...state.songList], newSong) );
 
-        database().ref('queue/' + newSong.uid).set({...newSong,date:Date.now()});
+        database().ref(`queue/${newSong.uid}`).set({...newSong,date:Date.now()});
 
         dispatch( closeModal({},false));
 

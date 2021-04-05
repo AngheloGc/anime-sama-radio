@@ -15,7 +15,7 @@ const Song = ({uid,name,image,detail}) => {
 
         e.preventDefault();
 
-        database().ref('queue/' + uid).remove();
+        database().ref(`queue/${uid}`).remove();
 
         const removedSong = songList.find( song => song.uid === uid );
 

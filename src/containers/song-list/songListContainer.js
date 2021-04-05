@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import Song from '../../components/song/song'
 import { useDispatch, useSelector } from 'react-redux';
-import { loadQueue } from '../../firebase/helpers/loadQueue';
 import { setSongs } from '../../actions/songList';
 import { database } from 'firebase';
 
@@ -10,7 +9,7 @@ const SongListContainer = () => {
 
     const dispatch = useDispatch();
     
-    const { newSong, songList } = useSelector(state => state.songList)
+    const { songList } = useSelector(state => state.songList)
     
 
     database().ref('queue').orderByChild('date').once('value', (snap) => {

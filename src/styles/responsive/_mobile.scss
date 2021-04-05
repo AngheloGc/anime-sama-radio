@@ -1,0 +1,56 @@
+@media (max-width: 720px) {
+
+    main {
+        max-width: 100%;
+        padding: 1rem;
+        height: auto;
+    }
+
+    .as-header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .as-component-searcher {
+        margin-top: 1.5rem;
+        width: 100%;
+    }
+
+    .as-component-loginButton {
+        display: none;
+    }
+
+    .as-section {
+        grid-template-rows: 400px 600px auto;
+        grid-template-columns: 1fr;
+    }
+
+    .as-container-songList {
+        header {
+            background-color: transparent;
+            position: absolute;
+        }
+    }
+
+    .as-container-player{
+        height: 100%;
+        width: 100%;
+    }
+
+    .as-container-orders {
+        grid-column: span 1;
+    }
+
+    .as-component-player-content .div-flex-centered {
+        padding: 1rem 2rem;
+    }
+
+    .as-component-player-content img {
+        height: 8rem;
+        width: 8rem;
+        min-height: 8rem;
+        min-width: 8rem;
+    }
+    
+}
+  
